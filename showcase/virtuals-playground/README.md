@@ -19,7 +19,7 @@ A fully browser-based playground for the Virtuals EconomyOS Compute API. Paste y
 ## Proof
 
 - Live deployment: https://virtuals-playground.vercel.app  
-- Source: https://github.com/satyamsinghal/virtuals-playground  
+- Source: https://github.com/Satyam-10124/virtuals_playground
 
 ## Stack
 
