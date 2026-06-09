@@ -1,105 +1,134 @@
-# ArewaOS
+# ACP CLI Demos
 
-**Autonomous Web3 Intelligence Agent | Built on Base | Powered by Hermes**
+This repo collects reusable agent skills and utilities that show how agents can use [`acp-cli`](https://github.com/Virtual-Protocol/acp-cli) for real-world commerce workflows.
 
-Built by [@0xarewah](https://x.com/0xarewah) — Zahra Usman, Kano, Nigeria.
-No developer background. No laptop. No capital. Built on a phone with free inference credits from [Virtuals Protocol](https://virtuals.io).
+The repo is organized around Showcase project packages and shared skill folders. A Showcase contribution should live under `showcase/<project-slug>/` with its `showcase.json`, proof links, and project-specific skills. Shared runtime skills that are reused across projects still live under `skills/<skill-name>/`.
 
----
+The first skill demonstrates an ACP agent subscribing to a paid Substack using:
 
-## What ArewaOS Does
+- ACP Agent Email for signup, receipts, OTPs, and account verification
+- ACP Agent Card for bounded, single-use checkout payments
+- `acp-cli` for identity, email, card issuance, payment status, 3DS, and receipt checks
+- Browser automation for the merchant checkout page
 
-ArewaOS is a seven-layer autonomous agent running on Base. It handles:
+## Skills
 
-| Layer | What It Does |
-|---|---|
-| Marketing Oracle | Campaigns, community audits, KOL maps, grant apps, FUD responses |
-| Storytelling Engine | Origin stories, wins-and-losses threads, brand narratives |
-| Crypto Confessions | Anonymous, specific, honest content that builds real audiences |
-| On-Chain Trading Analyst | Pre-pump fingerprint scanning, structured analysis with stop loss always included |
-| Ecosystem Scout | Grants, bounties, testnets, ambassador programs ranked by effort-to-reward |
-| AI Training Specialist | Platform guidance, qualifier prep, judgment skill development |
-| Prediction Market Analyst | Binary event probability calculation, arbitrage edge identification on Polymarket and Kalshi |
+Shared skill sources:
 
----
+- [`skills/acp-builder-setup`](skills/acp-builder-setup) - setup and model-routing guidance for Codex, Claude Code, and Claude Desktop.
+- [`skills/acp-paid-subscription-checkout`](skills/acp-paid-subscription-checkout) - paid checkout execution, desktop-safe handoff, and redacted evidence review.
 
-## Agent Infrastructure
+Contribution layout guidance: [`skills/README.md`](skills/README.md)
 
-| Component | Detail |
-|---|---|
-| Runtime | Hermes |
-| Chain | Base |
-| Token | $USMANZAHRA |
-| ACP Jobs | 22 active jobs |
-| Subscriptions | 10 active subscription plans |
-| Channels | Telegram, Discord |
-| Social | [Moltbook](https://www.moltbook.com/u/arewaos), [ClawHub](https://clawhub.ai/user/0xzahra) |
+## Showcase Publishing
 
----
+Project submissions use the default PR template in this repo. Add the demo
+package, proof, reusable skill, and card-ready manifest under
+[`showcase/<project-slug>`](showcase).
 
-## Repository Structure
+After a Showcase PR is approved and merged to `main`, changes under
+`showcase/**` dispatch the EconomyOS docs sync. The docs workflow
+regenerates the Showcase page data from the accepted manifest.
 
-```
-/
-├── SOUL.md          # Agent personality, seven layers, core rules
-├── AGENT.md         # Master config: startup sequence, job registry, error handling
-├── IDENTITY.md      # Character definition, proof of work, non-negotiables
-├── USER.md          # @0xarewah profile, links, representation rules
-├── TOOLS.md         # Available tools and usage rules
-├── HEARTBEAT.md     # Scheduled autonomous tasks
-├── MEMORY.md        # Memory architecture and update rules
-├── agent.yaml       # Deployment configuration
-└── offerings/
-    └── arewaos_v2_offerings.json   # ACP jobs, subscriptions, resources
+Automation requirement: configure `SHOWCASE_SYNC_TOKEN` in this repo with
+permission to dispatch workflows in `Virtual-Protocol/whitepaper-economyOS`.
+
+Validate manifests before requesting review:
+
+```bash
+node scripts/validate-showcase.mjs
 ```
 
----
+### Paid Substack Subscription Example
 
-## Proof of Work Behind This Agent
+Path: [`skills/acp-paid-subscription-checkout/examples/substack`](skills/acp-paid-subscription-checkout/examples/substack)
 
-- 567K+ X impressions, 6.6% engagement rate
-- 300%+ marketplace click growth from content campaigns
-- 400→600 Telegram community members in 90 days
-- 1,200+ spam accounts removed from live communities
-- 150 ClawHub skill downloads in 24 hours post-launch
-- $501+ in agent wallet from token trading fees
-- 32 Moltbook karma, 11 followers within days of launch
-- Liked by @virtuals_io
-- PR #3 submitted to Virtuals Protocol official showcase repo
-- Built entirely on a phone with free inference credits
+This example validates that an ACP agent can complete a paid newsletter checkout end-to-end, then verify the captured charge, receipt, and paid content access.
 
----
+## Utilities
 
-## Build Story
+Agent setup guide: [`docs/agent-setup.md`](docs/agent-setup.md)
 
-ArewaOS v1 was built and launched in 48 hours.
+GitHub skill references: [`docs/skill-packages.md`](docs/skill-packages.md)
 
-v1 ran on OpenClaw and hit real problems: context overflow at 256K tokens,
-ACP backend disconnection, session corruption, hallucination from degraded state.
-v1 was deleted after trying every available fix.
+Packaged skills: [`packages/`](packages)
 
-v2 is the rebuild. Smarter configuration, cleaner soul files, Hermes runtime,
-two new layers (AI Training + Prediction Markets), shorter message discipline to prevent overflow.
+Utility layout guidance: [`utilities/README.md`](utilities/README.md)
 
-Building in public. Breaking things. Rebuilding better.
+### Codex Virtuals Proxy
 
----
+Path: [`utilities/model-routing/codex-virtuals-proxy`](utilities/model-routing/codex-virtuals-proxy)
 
-## Links
+This local helper lets Codex use Virtuals-hosted models by translating Codex Responses API calls to the Virtuals Chat Completions endpoint.
 
-- **Agent (ACP):** https://app.virtuals.io/acp/agents/019e9392-b91c-75fe-bb14-a12e8ffb7561
-- **Token:** https://app.virtuals.io/virtuals/82660
-- **Moltbook:** https://www.moltbook.com/u/arewaos
-- **ClawHub skills:** https://clawhub.ai/user/0xzahra
-- **Builder X:** https://x.com/0xarewah
-- **Builder portfolio:** https://www.notion.so/Zahra-Usman-Portfolio-357a1c4765eb8162b41adb7bc3e2384e
+### Claude Virtuals Router
 
----
+Path: [`utilities/model-routing/claude-virtuals-router`](utilities/model-routing/claude-virtuals-router)
 
-## License
+This setup example lets Claude Code use Virtuals-hosted models through `claude-code-router`.
 
-MIT
+## Use The Skill
 
----
+### ACP Paid Subscription Checkout
 
-*Built from real work. Running on Base. Here to earn.*
+Path: [`skills/acp-paid-subscription-checkout`](skills/acp-paid-subscription-checkout)
+
+This is the reusable skill behind the Substack demo. It is intentionally broader than Substack: it describes a bounded paid subscription checkout workflow using ACP identity, email, and card primitives.
+
+The skill chooses live execution, handoff, or evidence-review mode based on the environment. The recommended flow is to install the skill, then give the agent only the merchant-specific details: target subscription, plan, billing cadence, spend cap, and verification requirement. You should not need to paste the full long-form prompt for each run.
+
+Install for Codex:
+
+```bash
+mkdir -p ~/.agents/skills
+cp -R skills/acp-paid-subscription-checkout ~/.agents/skills/
+```
+
+Install for Claude Code:
+
+```bash
+mkdir -p ~/.claude/skills
+cp -R skills/acp-paid-subscription-checkout ~/.claude/skills/
+```
+
+For all local-execution skills, use the installer helper:
+
+```bash
+scripts/install-local-skills.sh --mode symlink --target both
+```
+
+Invoke in Codex:
+
+```text
+Use $acp-paid-subscription-checkout to complete a bounded paid subscription checkout for my ACP agent and verify access.
+```
+
+Invoke in Claude Code:
+
+```text
+/acp-paid-subscription-checkout Subscribe my ACP agent email to the requested paid plan and verify access.
+```
+
+Other agents can read the same `SKILL.md` and `references/` files directly, or use the demo prompt as a raw fallback.
+
+For Claude Desktop or chat-only surfaces, upload the Claude Desktop ZIP package and use the same skill to prepare a safe handoff prompt or review redacted evidence. The skill must not issue cards, retrieve OTPs, or click paid checkout buttons unless local tools are available.
+
+## Safety Model
+
+These demos can involve live payments. A checkout agent should only issue cards and click final paid checkout buttons when the user has explicitly authorized:
+
+- merchant
+- plan
+- billing cadence
+- maximum amount
+- ACP agent email
+- ACP agent card payment method
+
+The agent must stop before paying if checkout details differ from the authorization.
+
+Final outputs must redact full card numbers, CVVs, magic links, OTPs, and other sensitive payment details.
+
+## Related
+
+- [`acp-cli`](https://github.com/Virtual-Protocol/acp-cli)
+- [`acp-node-v2`](https://github.com/Virtual-Protocol/acp-node-v2)

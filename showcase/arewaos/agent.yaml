@@ -87,15 +87,13 @@ metrics:
 
 # Deployment Files
 files:
-  - SOUL.md
-  - AGENT.md
-  - IDENTITY.md
-  - USER.md
-  - TOOLS.md
-  - HEARTBEAT.md
-  - MEMORY.md
-  - README.md
-  - offerings/arewaos_v2_offerings.json
+  - showcase/arewaos/soul.md
+  - showcase/arewaos/README.md
+  - showcase/arewaos/showcase.json
+  - showcase/arewaos/agent.yaml
+  - showcase/arewaos/offerings/arewaos_v2_offerings.json
+  - showcase/arewaos/examples/market-receipt-chefuniverse-cfCAVIAR.md
+  - showcase/arewaos/examples/market-receipt-colombia-group-k.md
 
 # Build Information
 build:
