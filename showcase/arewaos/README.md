@@ -35,6 +35,12 @@ The package isolates the ArewaOS build story, agent manifest, offerings, and mar
 - `examples/market-receipt-colombia-group-k.md` — external prediction-market receipt example.
 - `skills/arewaos-showcase/SKILL.md` — reusable workflow for evaluating or packaging ArewaOS-style agent showcases.
 
+## Demo Video
+
+- YouTube demo video: https://youtube.com/shorts/zkWaoRyqmZc
+
+The demo video shows ArewaOS live on Virtuals with the agent profile, job offerings, Base token context, and the builder story behind a phone-first non-developer launch from Kano, Nigeria.
+
 ## Links
 
 - ACP Agent: https://app.virtuals.io/acp/agents/019e9392-b91c-75fe-bb14-a12e8ffb7561
