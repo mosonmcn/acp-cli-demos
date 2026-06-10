@@ -9,6 +9,35 @@ const showcaseDir = path.join(repoRoot, 'showcase')
 const primitives = new Set(['wallet', 'email', 'card', 'token', 'acp'])
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const httpPattern = /^https?:\/\//
+const videoPageHostPattern =
+  /(?:^|\.)(?:youtube\.com|youtu\.be|x\.com|twitter\.com|vimeo\.com|tiktok\.com|loom\.com|github\.com)$/i
+const sharePreviewHostPattern =
+  /(?:^|\.)(?:dropbox\.com|drive\.google\.com|docs\.google\.com|1drv\.ms|onedrive\.live\.com|mega\.nz|mediafire\.com|wetransfer\.com)$/i
+const videoFilePattern = /\.(?:mp4|webm|mov|m4v)$/i
+// host pattern -> keyword the videoLabel must contain for that platform
+const platformLabelRules = [
+  [/(?:^|\.)(?:youtube\.com|youtu\.be)$/i, /youtube/i, 'YouTube'],
+  [/(?:^|\.)(?:x\.com|twitter\.com)$/i, /\bX\b|twitter|\u{1D54F}/iu, 'X'],
+  [/(?:^|\.)vimeo\.com$/i, /vimeo/i, 'Vimeo'],
+  [/(?:^|\.)tiktok\.com$/i, /tiktok/i, 'TikTok'],
+  [/(?:^|\.)loom\.com$/i, /loom/i, 'Loom'],
+]
+
+function hostOf(url) {
+  try {
+    return new URL(url).hostname.toLowerCase().replace(/\.$/, '')
+  } catch {
+    return ''
+  }
+}
+
+function pathOf(url) {
+  try {
+    return new URL(url).pathname.toLowerCase()
+  } catch {
+    return ''
+  }
+}
 
 function fail(message) {
   throw new Error(message)
@@ -129,13 +158,59 @@ function validateProject(project, file) {
   for (const key of ['kind', 'eyebrow', 'title']) {
     requireString(project.visual, key, `${file}: visual.${key}`)
   }
-  for (const key of ['posterUrl', 'videoUrl']) {
-    if (project.visual[key] !== undefined && typeof project.visual[key] !== 'string') {
-      fail(`${file}: visual.${key} must be a string`)
+  if (project.visual.videoUrl !== undefined) {
+    requireUrl(project.visual.videoUrl, `${file}: visual.videoUrl`)
+    const videoHost = hostOf(project.visual.videoUrl)
+    if (videoPageHostPattern.test(videoHost)) {
+      fail(
+        `${file}: visual.videoUrl must be a direct video file, not a video or repo page. ` +
+          'Put the page URL in links.video instead, then either omit visual.videoUrl ' +
+          '(YouTube, Vimeo, TikTok, Loom) or use the direct file URL ' +
+          '(X posts: video.twimg.com; GitHub repo files: raw.githubusercontent.com). ' +
+          'See showcase/README.md "Video Fields".',
+      )
+    }
+    if (sharePreviewHostPattern.test(videoHost)) {
+      fail(
+        `${file}: visual.videoUrl is a share/preview page that cannot stream inline. ` +
+          'Use a direct file host instead (for Dropbox: dl.dropboxusercontent.com; ' +
+          'otherwise a CDN, object storage, or raw.githubusercontent.com). ' +
+          'See showcase/README.md "Video Fields".',
+      )
+    }
+    if (!videoFilePattern.test(pathOf(project.visual.videoUrl))) {
+      fail(
+        `${file}: visual.videoUrl must point to a .mp4, .webm, .mov, or .m4v file ` +
+          'so the docs site can play it inline. See showcase/README.md "Video Fields".',
+      )
+    }
+  }
+  if (project.visual.posterUrl !== undefined) {
+    const poster = project.visual.posterUrl
+    const isSiteRelative =
+      typeof poster === 'string' && poster.startsWith('/') && !poster.startsWith('//')
+    if (!isSiteRelative) {
+      requireUrl(poster, `${file}: visual.posterUrl`)
     }
   }
   if (project.visual.videoLabel !== undefined) {
     requireString(project.visual, 'videoLabel', `${file}: visual.videoLabel`)
+  }
+  if (project.links.video !== undefined) {
+    requireString(
+      project.visual,
+      'videoLabel',
+      `${file}: visual.videoLabel (required when links.video is set; it becomes the watch button text)`,
+    )
+    const videoHost = hostOf(project.links.video)
+    for (const [hostPattern, labelPattern, platformName] of platformLabelRules) {
+      if (hostPattern.test(videoHost) && !labelPattern.test(project.visual.videoLabel)) {
+        fail(
+          `${file}: visual.videoLabel must mention ${platformName} when links.video points there, ` +
+            `for example "Watch the 1:50 demo on ${platformName}"`,
+        )
+      }
+    }
   }
 
   if (!Array.isArray(project.skills)) fail(`${file}: skills must be an array`)
