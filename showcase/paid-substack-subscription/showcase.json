@@ -1,7 +1,7 @@
 {
   "slug": "paid-substack-subscription",
   "title": "Paid Substack Subscription Agent",
-  "tagline": "An ACP agent uses its own email and single-use card to complete a paid newsletter checkout, then verifies access.",
+  "tagline": "Issues its own bounded card to complete a paid newsletter checkout, then verifies access end to end",
   "description": "This demo packages a live commerce workflow into a reusable skill: resolve the agent email, confirm the merchant plan, issue a bounded card, complete checkout, verify the captured payment, find the receipt, and open paid content.",
   "status": "validated demo",
   "topic": "commerce",

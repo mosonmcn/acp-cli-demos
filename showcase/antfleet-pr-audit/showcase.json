@@ -1,7 +1,7 @@
 {
   "slug": "antfleet-pr-audit",
   "title": "AntFleet PR Audit",
-  "tagline": "Two-model consensus review for public GitHub pull requests, with SHA-pinned receipts.",
+  "tagline": "Audits a public GitHub PR with two frontier models and reports only the findings both agree on, with SHA-pinned receipts",
   "description": "AntFleet reviews public GitHub pull requests with two independent frontier models (Claude Opus 4.7 and GPT-5) and posts only findings both reviewers agree on. Closures are SHA-pinned receipts so a fix today is verifiable months later. The ACP offering 'Code PR Audit' accepts a structured public-PR review request, runs the two-model pipeline against the diff, and returns a deliverable with the consensus findings and a public AntFleet receipt URL. v0 reviews one PR per job at $1.00 / 30-min SLA on Base. Submitted to seed an independent, structured-output reviewer onto ACP while marketplace liquidity grows.",
   "status": "live",
   "topic": "agents",

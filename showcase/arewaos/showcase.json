@@ -1,7 +1,7 @@
 {
   "slug": "arewaos",
   "title": "ArewaOS",
-  "tagline": "A seven-layer autonomous Web3 intelligence agent built on Base by a non-developer builder from Kano, Nigeria.",
+  "tagline": "One Base agent bundling seven services: storytelling, on chain trading analysis, ecosystem scouting, and event probability calls, built by a self taught developer from Kano, Nigeria",
   "description": "ArewaOS packages narrative engineering, storytelling, anonymous crypto confessions, on-chain trading analysis, ecosystem scouting, AI-training guidance, and event-probability analysis into one Base-native agent. This showcase includes the public agent manifest, offerings JSON, redacted market-action receipts, the public live-agent demo post, and the build story from OpenClaw v1 failure to Hermes v2 rebuild.",
   "status": "active v2 showcase",
   "topic": "agents",

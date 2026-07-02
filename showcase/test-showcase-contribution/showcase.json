@@ -1,7 +1,7 @@
 {
   "slug": "test-showcase-contribution",
   "title": "Test Showcase Contribution",
-  "tagline": "A reference package that exercises the EconomyOS Showcase contribution shape.",
+  "tagline": "Shows how to submit Showcase card metadata, proof links, soul.md, and a reusable skill in one PR",
   "description": "This package demonstrates how a builder can submit card metadata, proof links, optional soul.md context, and a project-specific reusable skill in one acp-cli-demos PR.",
   "status": "visible test",
   "topic": "skills",

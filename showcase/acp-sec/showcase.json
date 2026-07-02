@@ -1,7 +1,7 @@
 {
   "slug": "acp-sec",
   "title": "ACP-SEC",
-  "tagline": "Security scanning & Trust Score for ACP agents",
+  "tagline": "Scans an ACP agent contract and returns a Trust Score grading six security dimensions from A to F",
   "description": "ACP-SEC scans an agent contract — your own or a counterparty's — before you delegate authority or commit to a job. It produces a Trust Score (0-100, graded A to F) across six dimensions: contract security, authority scope, identity, hooks, ERC-8183/ACP compliance, and on-chain behavior. The identity and compliance dimensions include ERC-8004 and ERC-8183 conformance checks.",
   "status": "live",
   "topic": "skills",
