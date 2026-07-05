@@ -16,8 +16,12 @@ link back to their sources so anyone can check the work.
   No simulations, no fabricated figures. If a source returns nothing, it says so
   rather than inferring safety.
 - **Read-only by default.** Investigations never sign, spend, or mutate state.
-  The only value-moving actions are explicit ACP job settlement steps, which are
-  gated on operator authorization.
+  The only value-moving actions are explicit job-settlement steps — ACP escrow
+  release, or an x402 payment authorization the caller signs themselves — never
+  something V.A.P.E. initiates unprompted.
+- **Self-improvement is human-gated.** V.A.P.E. can propose fixes to its own
+  codebase, grounded in real, evidence-backed findings (prioritizing its own
+  red-team results). It opens a pull request; it never merges its own code.
 - **Keyless-first.** The core scan needs no paid keys; optional keys only widen
   coverage (e.g. contract verification).
 - **Proof over claims.** Findings are published with linkable sources; a verdict
