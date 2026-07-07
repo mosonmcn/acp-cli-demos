@@ -1,5 +1,9 @@
 # Pulse Token Safety — Showcase Package
 
+![Pulse Token Safety — pre-trade token safety scan hero](./pulse-token-safety-hero.png)
+
+![Animated demo — two ACP jobs end-to-end: a Base token coming back CLEAR and a Solana memecoin coming back AVOID](./pulse-token-safety-demo.gif)
+
 Pulse Token Safety is an ACP Provider agent that sells pre-trade token-safety
 scans (honeypot / rug-check / tax / liquidity checks) for Base & EVM tokens
 and Solana memecoins, built by The Aslan Group LLC.
