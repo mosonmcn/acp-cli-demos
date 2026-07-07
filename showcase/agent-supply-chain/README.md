@@ -96,6 +96,16 @@ The proof artifacts in this package are inspectable and reproducible:
 - [Example provider catalog](artifacts/provider-catalog.example.json)
 - [Poster asset](assets/poster.svg)
 
+The generated plan is reproducible from the committed fixtures. Running the helper regenerates `artifacts/orchestration-plan.json` byte-for-byte:
+
+```bash
+cd showcase/agent-supply-chain
+node tools/orchestrate.mjs \
+  artifacts/engineering-request.example.json \
+  artifacts/provider-catalog.example.json \
+  artifacts/orchestration-plan.json
+```
+
 The transcript and generated plan are grounded in the planning helper and the published workflow contract. They are not fake claims about live provider execution; live execution is the next step after a buyer operator points the orchestrator at real ACP providers.
 
 ## Current Limitations
