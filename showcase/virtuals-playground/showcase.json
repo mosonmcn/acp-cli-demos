@@ -8,10 +8,10 @@
   "topics": ["developer-tools", "playground", "compute", "api-explorer"],
   "builder": {
     "name": "Satyam Singhal",
-    "url": "https://github.com/satyamsinghal"
+    "url": "https://github.com/Satyam-10124"
   },
   "links": {
-    "repo": "https://github.com/satyamsinghal/virtuals-playground",
+    "repo": "https://github.com/Satyam-10124/virtuals_playground",
     "demo": "https://virtuals-playground.vercel.app",
     "share": "https://virtuals-playground.vercel.app",
     "feedback": "https://github.com/Virtual-Protocol/acp-cli-demos/issues/new?title=Feedback%3A%20Virtuals%20Playground&body=Which%20feedback%20prompt%20fits%3F%0A%0A-%20I%20want%20a%20feature%20added%0A-%20The%20code%20snippets%20are%20useful%0A-%20I%20want%20to%20reuse%20this%20for%20my%20own%20project%0A%0ANotes%3A%0A"
