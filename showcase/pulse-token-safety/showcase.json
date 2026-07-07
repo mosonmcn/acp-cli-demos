@@ -21,7 +21,8 @@
   "visual": {
     "kind": "live API proof + ACP job flow",
     "eyebrow": "base + solana + acp + x402",
-    "title": "pre-trade token safety scan"
+    "title": "pre-trade token safety scan",
+    "posterUrl": "https://raw.githubusercontent.com/Virtual-Protocol/acp-cli-demos/main/showcase/pulse-token-safety/pulse-token-safety-hero.png"
   },
   "skills": [
     {
