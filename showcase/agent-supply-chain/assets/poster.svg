@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Agent Supply Chain</title>
+  <desc id="desc">Buyer-side ACP orchestration from one engineering request to multiple verified provider deliverables and a final receipt bundle.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="55%" stop-color="#11182f"/>
+      <stop offset="100%" stop-color="#1d2947"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <style>
+      .label { font-family: Inter, Segoe UI, Arial, sans-serif; fill: #e5eefb; }
+      .small { font-size: 28px; opacity: .85; }
+      .mid { font-size: 34px; font-weight: 600; }
+      .title { font-size: 68px; font-weight: 800; letter-spacing: -1px; }
+      .line { stroke: url(#accent); stroke-width: 8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .card { fill: rgba(15,23,42,.72); stroke: rgba(148,163,184,.35); stroke-width: 2; rx: 24; }
+    </style>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <circle cx="1120" cy="120" r="160" fill="rgba(125,211,252,.16)"/>
+  <circle cx="210" cy="610" r="180" fill="rgba(52,211,153,.12)"/>
+  <text x="90" y="120" class="label title">Agent Supply Chain</text>
+  <text x="92" y="172" class="label mid">One request. Many providers. One verified bundle.</text>
+
+  <rect x="90" y="250" width="260" height="120" class="card"/>
+  <text x="130" y="300" class="label mid">Request</text>
+  <text x="130" y="342" class="label small">Decompose the task</text>
+
+  <rect x="435" y="250" width="260" height="120" class="card"/>
+  <text x="475" y="300" class="label mid">Providers</text>
+  <text x="475" y="342" class="label small">Browse and rank ACP sellers</text>
+
+  <rect x="780" y="250" width="360" height="120" class="card"/>
+  <text x="820" y="300" class="label mid">Jobs & Escrow</text>
+  <text x="820" y="342" class="label small">Approve, fund, track, verify, reject</text>
+
+  <path d="M350 310 H425" class="line"/>
+  <path d="M695 310 H770" class="line"/>
+
+  <rect x="240" y="470" width="800" height="140" class="card"/>
+  <text x="285" y="522" class="label mid">Final artifact bundle</text>
+  <text x="285" y="570" class="label small">Architecture note + proof bundle + manifest + receipts</text>
+</svg>
