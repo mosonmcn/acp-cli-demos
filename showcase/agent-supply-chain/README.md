@@ -94,7 +94,7 @@ The proof artifacts in this package are inspectable and reproducible:
 - [Generated orchestration plan](artifacts/orchestration-plan.json)
 - [Example request fixture](artifacts/engineering-request.example.json)
 - [Example provider catalog](artifacts/provider-catalog.example.json)
-- [Poster asset](assets/poster.svg)
+- [Poster asset](assets/poster.png)
 
 The generated plan is reproducible from the committed fixtures. Running the helper regenerates `artifacts/orchestration-plan.json` byte-for-byte:
 
@@ -127,7 +127,7 @@ The transcript and generated plan are grounded in the planning helper and the pu
 - `showcase.json` - card metadata consumed by the showcase validator and docs sync.
 - `README.md` - this overview.
 - `soul.md` - public buyer-side operating context.
-- `assets/poster.svg` - hero asset for the card.
+- `assets/poster.png` - hero asset for the card (1280x720 raster).
 - `examples/request-decomposition.md` - engineer request split into subtasks.
 - `examples/provider-ranking.md` - ranked provider scorecard.
 - `examples/orchestration-bundle.md` - execution transcript and final artifact bundle.
@@ -142,4 +142,4 @@ The transcript and generated plan are grounded in the planning helper and the pu
 - Repo: [showcase/agent-supply-chain](.)
 - Proof: [examples/orchestration-bundle.md](examples/orchestration-bundle.md)
 - Skill: [skills/agent-supply-chain-orchestrator/SKILL.md](skills/agent-supply-chain-orchestrator/SKILL.md)
-- Poster: [assets/poster.svg](assets/poster.svg)
+- Poster: [assets/poster.png](assets/poster.png)

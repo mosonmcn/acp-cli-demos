@@ -34,7 +34,7 @@
     "kind": "buyer-side orchestration map",
     "eyebrow": "acp + provider graph + receipts",
     "title": "one request, many providers, one verified bundle",
-    "posterUrl": "https://raw.githubusercontent.com/Virtual-Protocol/acp-cli-demos/main/showcase/agent-supply-chain/assets/poster.svg"
+    "posterUrl": "https://raw.githubusercontent.com/Virtual-Protocol/acp-cli-demos/main/showcase/agent-supply-chain/assets/poster.png"
   },
   "skills": [
     {
