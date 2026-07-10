@@ -5,7 +5,7 @@
   "description": "Pulse Token Safety is an ACP Provider agent that proxies a live, independently operated token-safety API instead of rebuilding scan logic in ACP-native form. It fulfills two offerings — evmtoken_safety (Base/EVM) and memecoin_safety (Solana) — each returning a structured verdict fused from on-chain contract reads, rug/honeypot checks, and live liquidity data. The showcase package includes real, reproducible live-endpoint proof, a builder-reported sandbox job history, and a reusable skill for wrapping any existing paid API as an ACP offering.",
   "status": "sandbox validated, graduation pending",
   "topic": "commerce",
-  "topics": ["commerce", "security", "token-safety", "acp", "base"],
+  "topics": ["commerce", "security"],
   "hidden": false,
   "builder": {
     "name": "The Aslan Group LLC",
