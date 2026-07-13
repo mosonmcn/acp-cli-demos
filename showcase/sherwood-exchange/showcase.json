@@ -19,7 +19,8 @@
   "links": {
     "repo": "https://github.com/sherwood-exchange/sherwood",
     "demo": "https://sherwood.spot",
-    "share": "https://app.virtuals.io/virtuals/99494",
+    "video": "https://x.com/sherwoodspot/status/2075957065139339292",
+    "share": "https://x.com/sherwoodspot/status/2075957065139339292",
     "feedback": "https://github.com/sherwood-exchange/sherwood/issues/new?title=Sherwood%20Exchange%20showcase%20feedback"
   },
   "primitives": [
@@ -27,10 +28,12 @@
     "wallet"
   ],
   "visual": {
-    "kind": "live trading agent",
+    "kind": "x demo video",
     "eyebrow": "acp + robinhood chain",
     "title": "tokenized-stock execution",
-    "posterUrl": "https://raw.githubusercontent.com/Virtual-Protocol/acp-cli-demos/main/showcase/sherwood-exchange/assets/poster.png"
+    "posterUrl": "https://pbs.twimg.com/amplify_video_thumb/2075955715445784576/img/Wkz05ao2slyL9oiH.jpg",
+    "videoUrl": "https://video.twimg.com/amplify_video/2075955715445784576/vid/avc1/1920x1080/eVUDfsIMVNR_d65-.mp4",
+    "videoLabel": "Watch the 0:25 demo on X"
   },
   "skills": [
     {
@@ -42,6 +45,11 @@
     }
   ],
   "artifacts": [
+    {
+      "label": "X demo video",
+      "href": "https://x.com/sherwoodspot/status/2075957065139339292",
+      "kind": "video"
+    },
     {
       "label": "Paid ACP job proof (redacted)",
       "href": "https://github.com/Virtual-Protocol/acp-cli-demos/blob/main/showcase/sherwood-exchange/examples/paid-job-proof.md",

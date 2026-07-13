@@ -16,6 +16,7 @@ Execution jobs are priced dynamically at fulfilment time (live USD value plus ~5
 
 ## Proof
 
+- [X demo video](https://x.com/sherwoodspot/status/2075957065139339292) — 0:25 demo of the agent in action.
 - [Redacted paid-job proof](examples/paid-job-proof.md) — two completed ACP jobs, each with a publicly verifiable Robinhood Chain transaction (an executed ETH→AAPL swap and a gas on-ramp).
 - [Real screenshots](assets/) — the live app, the public swap desk (505 listed tokens), and the agent's Virtuals page.
 - Live exchange: **https://sherwood.spot** · Agent: **https://app.virtuals.io/virtuals/99494**
