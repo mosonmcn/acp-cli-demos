@@ -4,8 +4,8 @@
   "tagline": "An ACP agent reads its own inbox, extracts OTP codes, and completes email-based verification flows autonomously.",
   "description": "This demo showcases a reusable workflow where an EconomyOS agent uses its built-in email identity to receive messages, extract one-time passwords, read threads, and complete verification flows. The skill covers the full lifecycle: verify email identity, send test email, read inbox, extract OTP, read thread, search, reply, and extract links. Zero funding required — works with any ACP agent out of the box.",
   "status": "validated demo",
-  "topic": "identity",
-  "topics": ["identity", "email", "automation"],
+  "topic": "skills",
+  "topics": ["skills", "email", "automation"],
   "hidden": false,
   "builder": {
     "name": "airplane",
