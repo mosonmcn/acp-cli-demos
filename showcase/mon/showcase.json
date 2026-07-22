@@ -33,6 +33,7 @@
   "skills": [
     {
       "name": "Code Architecture Discovery",
+      "href": "https://github.com/mosonmcn/MON",
       "summary": "Runs deep static analysis to discover APIs, endpoints, and form schemas in any cloned Python or JS project.",
       "install": "pip install -r requirements.txt && python -m mon.sdk"
     }
