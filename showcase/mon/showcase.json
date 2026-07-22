@@ -17,7 +17,8 @@
   },
   "links": {
     "repo": "https://github.com/mosonmcn/MON",
-    "share": "https://x.com/MosonDev/status/2078572007227093352",
+    "video": "https://x.com/MosonDev/status/2078572007227093352",
+    "videoLabel": "Watch MON Demo Video",
     "feedback": "https://github.com/mosonmcn/MON/issues"
   },
   "primitives": [
@@ -40,9 +41,9 @@
   ],
   "artifacts": [
     {
-      "label": "MON Architecture Scan Report",
-      "href": "https://github.com/mosonmcn/MON/blob/main/examples/all_data.py",
-      "kind": "github"
+      "label": "MON Architecture Scan Sample Output",
+      "href": "https://raw.githubusercontent.com/Virtual-Protocol/acp-cli-demos/main/showcase/mon/sample_output.json",
+      "kind": "file"
     }
   ],
   "feedbackPrompts": [
